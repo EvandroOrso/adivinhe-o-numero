@@ -22,9 +22,9 @@ minMaxForm.addEventListener("submit", event => {
 
     event.preventDefault();
 
-    if(minValueInput.value > maxValueInput.value) {
+    if(Number(minValueInput.value) > Number(maxValueInput.value)) {
         errorMessage.innerText = "O valor mínimo não pode ser maior que o valor máximo";
-    } else if(minValueInput.value === maxValueInput.value) {
+    } else if(Number(minValueInput.value) === Number(maxValueInput.value)) {
         errorMessage.innerText = "O valor mínimo e máximo não podem ser iguais.";
     } else {
         // Define os valores minimos e máximos
